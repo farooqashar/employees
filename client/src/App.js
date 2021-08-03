@@ -108,18 +108,31 @@ function App() {
       {employees.map(
         (value) => {
           return (
+            <>
+            <br/>
             <Card>
 
             <CardHeader 
-            title={value.name}>
+            title={value.name}
+            subheader={value.role}>
 
             </CardHeader>
             <CardContent>
 
+
             <div key={value.id}>
-              {value.country}
-              {value.role}
-              {value.age}
+                  <Typography variant="body2" color="textSecondary" component="p">
+                     Age: {value.age}
+                  </Typography>
+
+                    <Typography variant="body2" color="textSecondary" component="p">
+                     Country: {value.country}
+                  </Typography>
+
+                   <Typography variant="body2" color="textSecondary" component="p">
+                     Yearly Wage: ${value.wage}
+                  </Typography>
+
             </div>
               </CardContent>
 
@@ -135,6 +148,7 @@ function App() {
               </CardActions>
 
             </Card>
+            </>
           )
         }
 
