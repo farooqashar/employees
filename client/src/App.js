@@ -1,5 +1,6 @@
 import "./App.css";
 import React, { useState } from "react";
+import Axios from "axios";
 
 function App() {
 
@@ -9,25 +10,42 @@ function App() {
   const [role, setRole] = useState("");
   const [wage, setWage] = useState(0);
 
+  const handleSubmit = () => {
+    Axios.post("http://localhost:3002/create", 
+    {
+      name: name,
+      age: age,
+      country: country,
+      role: role, 
+      wage: wage
+    }
+    )
+    .then(data => {
+      console.log("Adding Employee Request 200");
+    });
+
+
+  };
+
   return (
     <div className="App">
       <div className="formInfo">
-        <label for="name">Name:</label>
-        <input id="name" type="text" />
+        <label htmlFor="name">Name:</label>
+        <input id="name" type="text" onChange={(event) => setName(event.target.value)}/>
 
-        <label for="age">Age:</label>
-        <input id="age" type="number" />
+        <label htmlFor="age">Age:</label>
+        <input id="age" type="number" onChange={(event) => setAge(event.target.value)} />
 
-        <label for="country">Country:</label>
-        <input id="country" type="text" />
+        <label htmlFor="country">Country:</label>
+        <input id="country" type="text" onChange={(event) => setCountry(event.target.value)} />
 
-        <label for="role">Role:</label>
-        <input id="role" type="text" />
+        <label htmlFor="role">Role:</label>
+        <input id="role" type="text" onChange={(event) => setRole(event.target.value)}/>
 
-        <label for="wage">Wage(Year):</label>
-        <input id="wage" type="number" />
+        <label htmlFor="wage">Wage(Year):</label>
+        <input id="wage" type="number" onChange={(event) => setWage(event.target.value)}/>
 
-        <button type="submit">Add Employee</button>
+        <button onClick = {handleSubmit} type="submit">Add Employee</button>
       </div>
     </div>
   );
