@@ -11,7 +11,8 @@ function App() {
   const [wage, setWage] = useState(0);
 
   const handleSubmit = () => {
-    Axios.post("http://localhost:3002/create", 
+
+    Axios.post("http://localhost:2727/create", 
     {
       name: name,
       age: age,
@@ -47,6 +48,8 @@ function App() {
 
         <button onClick = {handleSubmit} type="submit">Add Employee</button>
       </div>
+      <hr /> 
+      
     </div>
   );
 }
