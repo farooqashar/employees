@@ -125,3 +125,11 @@ li a {
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
+
+.ssm {
+  color: aqua;
+  font-size: medium;
+  animation-name: subt;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}

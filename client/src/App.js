@@ -100,6 +100,7 @@ function App() {
 
         <br />
         <br />
+       <br />
 
       <h4 class="subttt">Current Employees</h4>
 
@@ -110,7 +111,7 @@ function App() {
           return (
             <>
             <br/>
-            <Card>
+            <Card variant="outlined">
 
             <CardHeader 
             title={value.name}
@@ -134,16 +135,24 @@ function App() {
                   </Typography>
 
             </div>
+
+              <br />
+              <br />
+              <div>
+                <h4 class="ssm"> Changing Wages </h4>
+                <input placeholder="Enter New Wage in USD Here" rows = "1" required class="form-control" onChange={(event) => setNewWage(event.target.value)} type="number"/>
+              </div>
               </CardContent>
+
+
 
               <CardActions>
 
-              <div>
-                <input onChange={(event) => setNewWage(event.target.value)} type="text" placeholder="Change Wage"/>
-                <button class="btn btn-secondary"onClick = {() => updateData(value.id)}>Update</button>
 
-                <button class="btn btn-danger"onClick = {() => deleteData(value.id)}>Delete</button>
-              </div>
+               
+               <button class="btn btn-secondary"onClick = {() => updateData(value.id)}>Update Wage</button>
+
+                <button class="btn btn-danger"onClick = {() => deleteData(value.id)}>Remove Employee</button>
 
               </CardActions>
 
