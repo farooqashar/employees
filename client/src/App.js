@@ -49,7 +49,7 @@ function App() {
   };
 
   const deleteData = (id) => {
-    Axios.delete("http://localhost:2727/update")
+    Axios.delete(`http://localhost:2727/delete/${id}`);
   };
 
   const getEmployees = () => {
