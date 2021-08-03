@@ -32,6 +32,18 @@ console.log(req.body);
 
 });
 
+app.get("/employees", (req,res) => {
+    db.query('SELECT * from employees', (err, result) => {
+        if (err) {
+            console.error(err);
+        } else {
+            res.send(result);
+        }
+    });
+
+});
+
+
 app.listen(2727, (req, res) => {
   console.log("Listening on PORT");
 });
