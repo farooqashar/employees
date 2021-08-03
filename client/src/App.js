@@ -4,6 +4,7 @@ import Axios from "axios";
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
+import CardHeader from '@material-ui/core/CardHeader';
 
 function App() {
 
@@ -106,18 +107,29 @@ function App() {
       {employees.map(
         (value) => {
           return (
+            <Card>
+            <CardContent>
+
             <div key={value.id}>
               {value.name}
               {value.country}
               {value.role}
               {value.age}
+            </div>
+              </CardContent>
+
+              <CardActions>
+
               <div>
                 <input onChange={(event) => setNewWage(event.target.value)} type="text" placeholder="Change Wage"/>
                 <button class="btn btn-secondary"onClick = {() => updateData(value.id)}>Update</button>
 
                 <button class="btn btn-danger"onClick = {() => deleteData(value.id)}>Delete</button>
               </div>
-            </div>
+
+              </CardActions>
+
+            </Card>
           )
         }
 
