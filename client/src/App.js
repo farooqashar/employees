@@ -1,6 +1,9 @@
 import "./App.css";
 import React, { useState } from "react";
 import Axios from "axios";
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
 
 function App() {
 
@@ -110,9 +113,9 @@ function App() {
               {value.age}
               <div>
                 <input onChange={(event) => setNewWage(event.target.value)} type="text" placeholder="Change Wage"/>
-                <button onClick = {() => updateData(value.id)}>Update</button>
+                <button class="btn btn-secondary"onClick = {() => updateData(value.id)}>Update</button>
 
-                <button onClick = {() => deleteData(value.id)}>Delete</button>
+                <button class="btn btn-danger"onClick = {() => deleteData(value.id)}>Delete</button>
               </div>
             </div>
           )
