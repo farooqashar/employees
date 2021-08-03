@@ -70,6 +70,6 @@ app.delete("/delete/:id", (req, res) => {
   });
 });
 
-app.listen(2727, (req, res) => {
+app.listen(process.env.PORT || 2727, (req, res) => {
   console.log("Listening on PORT");
 });
