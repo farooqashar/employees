@@ -1,6 +1,6 @@
 # HR Management Site
 
-This is a simple site built using Express, Node.js, React.js, and MYSQl in order to keep track of employees at a company. 
+This is a simple site built using Express, Node.js, React.js, and MYSQL in order to keep track of employees at a company. 
 
 # Running Locally 
 
