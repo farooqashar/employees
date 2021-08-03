@@ -10,6 +10,8 @@ function App() {
   const [role, setRole] = useState("");
   const [wage, setWage] = useState(0);
 
+  const [employees, setEmployees] = useState([]);
+
   const handleSubmit = () => {
 
     Axios.post("http://localhost:2727/create", 
@@ -27,6 +29,13 @@ function App() {
 
 
   };
+
+  const getEmployees = () => {
+    Axios.get("http://localhost:2727/employees")
+    .then(data => {
+      setEmployees(data);
+    })
+  }; 
 
   return (
     <>
@@ -52,7 +61,7 @@ function App() {
       </div>
       ------
 
-      <button> Show Employees </button>
+      <button onClick={getEmployees}> Show Employees </button>
     </div>
     </>
   );
