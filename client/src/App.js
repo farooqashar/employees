@@ -41,6 +41,9 @@ function App() {
       wage: newWage
     })
     .then(data => {
+      setEmployees(employees.map((elt) => {
+        return elt.id == id ? {id: elt.id, name: elt.name, country: elt.country, wage: elt.newWage, age: elt.age, role: elt.role} : elt
+      }))
       console.log("Updated Database");
     });
   };
