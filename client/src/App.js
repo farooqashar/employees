@@ -29,7 +29,9 @@ function App() {
   };
 
   return (
+    <>
     <div className="App">
+
       <div className="formInfo">
         <label htmlFor="name">Name:</label>
         <input id="name" type="text" onChange={(event) => setName(event.target.value)}/>
@@ -48,9 +50,11 @@ function App() {
 
         <button onClick = {handleSubmit} type="submit">Add Employee</button>
       </div>
-      <hr /> 
-      
+      ------
+
+      <button> Show Employees </button>
     </div>
+    </>
   );
 }
 
