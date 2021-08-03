@@ -48,6 +48,10 @@ function App() {
     });
   };
 
+  const deleteData = (id) => {
+    Axios.delete("http://localhost:2727/update")
+  };
+
   const getEmployees = () => {
     Axios.get("http://localhost:2727/employees")
     .then(res => {
@@ -91,6 +95,8 @@ function App() {
               <div>
                 <input onChange={(event) => setNewWage(event.target.value)} type="text" placeholder="Change Wage"/>
                 <button onClick = {() => updateData(value.id)}>Update</button>
+
+                <button onClick = {() => deleteData(value.id)}>Delete</button>
               </div>
             </div>
           )
