@@ -5,12 +5,10 @@
 }
 
 .formInfo {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .formInfo input {
@@ -18,11 +16,10 @@ align-items: center;
   height: 50px;
   font-size: large;
   padding-left: 10px;
-  }
-
+}
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
 }
 .sidebar-nav {
   margin-top: 20px;
@@ -30,24 +27,48 @@ a {
   list-style: none;
 }
 @keyframes mainTitle {
-  from {color: red;}
-  to {color: white;}
-  to {color: blue;}
+  from {
+    color: red;
+  }
+  to {
+    color: white;
+  }
+  to {
+    color: blue;
+  }
 }
 @keyframes each {
-  from {color: purple;}
-  to {color: blue;}
-  to {color: goldenrod;}
+  from {
+    color: purple;
+  }
+  to {
+    color: blue;
+  }
+  to {
+    color: goldenrod;
+  }
 }
 @keyframes subt {
-  from {color: red;}
-  to {color: yellow;}
-  to {color: green;}
+  from {
+    color: red;
+  }
+  to {
+    color: yellow;
+  }
+  to {
+    color: green;
+  }
 }
 @keyframes bkgrdc {
-  from {background-color: lightcyan;}
-  to {background-color: darkslateblue;}
-  to {background-color: white;}
+  from {
+    background-color: lightcyan;
+  }
+  to {
+    background-color: darkslateblue;
+  }
+  to {
+    background-color: white;
+  }
 }
 body {
   padding: 50px;
@@ -56,21 +77,21 @@ body {
   animation-duration: 25s;
 }
 h1 {
-  color:crimson;
+  color: crimson;
   text-align: center;
   animation-name: mainTitle;
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
 .flex-container {
-    display: flex;
+  display: flex;
 }
 .flex-child {
-    flex: 1;
-}  
+  flex: 1;
+}
 .flex-child:first-child {
-    margin-right: 167px;
-} 
+  margin-right: 167px;
+}
 label:not(.check) {
   font-size: 12px;
   font-weight: bold;
@@ -79,9 +100,10 @@ label:not(.check) {
   text-transform: uppercase;
 }
 .container {
-    text-align: center;
+  text-align: center;
 }
-.button:hover, button:hover {
+.button:hover,
+button:hover {
   opacity: 0.8;
   font-weight: normal;
 }
@@ -90,31 +112,31 @@ ul {
   margin: 0;
   padding: 0;
 }
- 
+
 li {
   font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
   border-bottom: 1px dotted #ccc;
 }
- 
+
 li:last-child {
   border: none;
 }
- 
+
 li a {
   text-decoration: none;
   color: blue;
   display: block;
   width: 100%;
- 
+
   -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
   -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
   -o-transition: font-size 0.3s ease, background-color 0.3s ease;
   -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
   transition: font-size 0.3s ease, background-color 0.3s ease;
 }
- 
+
 .eachl {
-  color:cornflowerblue;
+  color: cornflowerblue;
   animation-name: each;
   animation-duration: 3s;
   animation-iteration-count: infinite;

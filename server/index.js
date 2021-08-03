@@ -15,59 +15,60 @@ const db = mysql.createConnection({
 });
 
 app.post("/create", (req, res) => {
-console.log(req.body);
+  console.log(req.body);
 
   const { name, age, country, role, wage } = req.body;
 
-  db.query('INSERT INTO employees (name, age, country, role, wage) VALUES (?,?,?,?,?)', [name, age, country, role, wage], 
-  (err, result) => {
+  db.query(
+    "INSERT INTO employees (name, age, country, role, wage) VALUES (?,?,?,?,?)",
+    [name, age, country, role, wage],
+    (err, result) => {
       if (err) {
-          console.error(err);
+        console.error(err);
       } else {
-          res.send("Database Updated");
+        res.send("Database Updated");
       }
-  } 
-
+    }
   );
-
 });
 
-app.get("/employees", (req,res) => {
-    db.query('SELECT * from employees', (err, result) => {
-        if (err) {
-            console.error(err);
-        } else {
-            res.send(result);
-        }
-    });
-
+app.get("/employees", (req, res) => {
+  db.query("SELECT * from employees", (err, result) => {
+    if (err) {
+      console.error(err);
+    } else {
+      res.send(result);
+    }
+  });
 });
 
-app.put("/update", (req,res) => {
-    const id = req.body.id;
-    const wage = req.body.wage;
+app.put("/update", (req, res) => {
+  const id = req.body.id;
+  const wage = req.body.wage;
 
-    db.query('UPDATE employees SET wage = ? WHERE id = ?',[wage,id], 
-    (err,result) => {
-        if (err) {
-            console.error(err);
-        } else {
-            res.send(result);
-        }
-    });
+  db.query(
+    "UPDATE employees SET wage = ? WHERE id = ?",
+    [wage, id],
+    (err, result) => {
+      if (err) {
+        console.error(err);
+      } else {
+        res.send(result);
+      }
+    }
+  );
 });
 
-app.delete("/delete/:id", (req,res) => {
-    const id = req.params.id;
-    db.query("DELETE FROM employees WHERE id = ?", id, 
-    (err,result) => {
-        if (err) {
-            console.error(err);
-        } else {
-            res.send(result);
-        }
-    })
-})
+app.delete("/delete/:id", (req, res) => {
+  const id = req.params.id;
+  db.query("DELETE FROM employees WHERE id = ?", id, (err, result) => {
+    if (err) {
+      console.error(err);
+    } else {
+      res.send(result);
+    }
+  });
+});
 
 app.listen(2727, (req, res) => {
   console.log("Listening on PORT");
