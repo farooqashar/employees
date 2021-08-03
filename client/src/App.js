@@ -9,7 +9,7 @@ function App() {
   const [country, setCountry] = useState("");
   const [role, setRole] = useState("");
   const [wage, setWage] = useState(0);
-
+  const [newWage, setNewWage] = useState(0);
   const [employees, setEmployees] = useState([]);
 
   const handleSubmit = () => {
@@ -76,6 +76,10 @@ function App() {
               {value.country}
               {value.role}
               {value.age}
+              <div>
+                <input onChange={(event) => setNewWage(event.target.value)} type="text" placeholder="Change Wage"/>
+                <button>Update</button>
+              </div>
             </div>
           )
         }
