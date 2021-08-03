@@ -39,6 +39,9 @@ function App() {
     Axios.put("http://localhost:2727/update", {
       id: id, 
       wage: newWage
+    })
+    .then(data => {
+      console.log("Updated Database");
     });
   };
 
