@@ -82,11 +82,11 @@ function App() {
       <div className="App">
         <h1>Human Resources Management System</h1>
         <br />
-        <h4 class="subttt">Adding Employees</h4>
+        <h4 className="subttt">Adding Employees</h4>
 
-        <div class="form-group">
+        <div className="form-group">
           <form>
-            <label class="form-label" htmlFor="name">
+            <label className="form-label" htmlFor="name">
               Full Name:
             </label>
             <input
@@ -94,13 +94,13 @@ function App() {
               rows="1"
               cols="47"
               required
-              class="form-control"
+              className="form-control"
               id="name"
               type="text"
               onChange={event => setName(event.target.value)}
             />
             <p></p>
-            <label class="form-label" htmlFor="age">
+            <label className="form-label" htmlFor="age">
               Age:
             </label>
             <input
@@ -108,13 +108,13 @@ function App() {
               rows="1"
               cols="47"
               required
-              class="form-control"
+              className="form-control"
               id="age"
               type="number"
               onChange={event => setAge(event.target.value)}
             />
             <p></p>
-            <label class="form-label" htmlFor="country">
+            <label className="form-label" htmlFor="country">
               Country:
             </label>
             <input
@@ -122,13 +122,13 @@ function App() {
               rows="1"
               cols="47"
               required
-              class="form-control"
+              className="form-control"
               id="country"
               type="text"
               onChange={event => setCountry(event.target.value)}
             />
             <p></p>
-            <label class="form-label" htmlFor="role">
+            <label className="form-label" htmlFor="role">
               Role:
             </label>
             <input
@@ -136,13 +136,13 @@ function App() {
               rows="1"
               cols="47"
               required
-              class="form-control"
+              className="form-control"
               id="role"
               type="text"
               onChange={event => setRole(event.target.value)}
             />
             <p></p>
-            <label class="form-label" htmlFor="wage">
+            <label className="form-label" htmlFor="wage">
               Yearly Wage:
             </label>
             <input
@@ -150,14 +150,14 @@ function App() {
               rows="1"
               cols="47"
               required
-              class="form-control"
+              className="form-control"
               id="wage"
               type="number"
               onChange={event => setWage(event.target.value)}
             />
             <br />
             <button
-              class="btn btn-primary"
+              className="btn btn-primary"
               onClick={handleSubmit}
               type="submit"
             >
@@ -170,9 +170,9 @@ function App() {
         <br />
         <br />
 
-        <h4 class="subttt">Current Employees</h4>
+        <h4 className="subttt">Current Employees</h4>
 
-        <button class="btn btn-primary" onClick={getEmployees}>
+        <button className="btn btn-primary" onClick={getEmployees}>
           {" "}
           Show Employees{" "}
         </button>
@@ -216,12 +216,12 @@ function App() {
                   <br />
                   <br />
                   <div>
-                    <h4 class="ssm"> Changing Wages </h4>
+                    <h4 className="ssm"> Changing Wages </h4>
                     <input
                       placeholder="Enter New Wage in USD Here"
                       rows="1"
                       required
-                      class="form-control"
+                      className="form-control"
                       onChange={event => setNewWage(event.target.value)}
                       type="number"
                     />
@@ -230,14 +230,14 @@ function App() {
 
                 <CardActions>
                   <button
-                    class="btn btn-secondary"
+                    className="btn btn-secondary"
                     onClick={() => updateData(value.id)}
                   >
                     Update Wage
                   </button>
 
                   <button
-                    class="btn btn-danger"
+                    className="btn btn-danger"
                     onClick={() => deleteData(value.id)}
                   >
                     Remove Employee
