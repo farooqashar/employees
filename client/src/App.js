@@ -50,7 +50,10 @@ function App() {
 
   const deleteData = (id) => {
     console.log("in frontend delete func");
-    Axios.delete(`http://localhost:2727/delete/${id}`);
+    Axios.delete(`http://localhost:2727/delete/${id}`)
+    .then(data => {
+      setEmployees(employees.filter((elt) => {return elt.id !== id}));
+    });
   };
 
   const getEmployees = () => {
