@@ -33,7 +33,10 @@ function App() {
     }])
     });
 
+  };
 
+  const updateData = () => {
+    Axios.put("http://localhost:2727/update");
   };
 
   const getEmployees = () => {
