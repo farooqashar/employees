@@ -68,10 +68,11 @@ function App() {
     <div className="App">
 
       <h1>Human Resources Management System</h1>
-
+        <br />
       <h4 class="subttt">Adding Employees</h4>
 
       <div class="form-group">
+      <form>
         <label class="form-label" htmlFor="name">Name:</label>
         <input placeholder="Enter A Name Here" rows = "1" cols = "47" required class="form-control" id="name" type="text" onChange={(event) => setName(event.target.value)}/>
         <p></p>
@@ -88,10 +89,13 @@ function App() {
         <input placeholder="Enter Yearly Wage in USD Here" rows = "1" cols = "47" required class="form-control" id="wage" type="number" onChange={(event) => setWage(event.target.value)}/>
         <br />
         <button class="btn btn-primary" onClick = {handleSubmit} type="submit">Add Employee</button>
+       </form>
       </div>
-        
+
+
         <br />
         <br />
+
       <h4 class="subttt">Current Employees</h4>
 
       <button class="btn btn-primary" onClick={getEmployees}> Show Employees </button>

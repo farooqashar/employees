@@ -57,6 +57,7 @@ body {
 }
 h1 {
   color:crimson;
+  text-align: center;
   animation-name: mainTitle;
   animation-duration: 3s;
   animation-iteration-count: infinite;
