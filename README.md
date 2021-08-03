@@ -35,4 +35,17 @@ node index.js
 ```
 The backend server is located at `http://localhost:2727/`.
 
+**Front Page of Site**
+
+![Front Page of Site](https://raw.githubusercontent.com/farooqashar/employees/readme_images/images/front.png)
+
+
+**Showing Employees on the Site**
+
+![Showing Employees on the Site](https://raw.githubusercontent.com/farooqashar/employees/readme_images/images/list.png)
+
+**Example of MYSQL Database**
+
+![Example of MYSQL Database](https://raw.githubusercontent.com/farooqashar/employees/readme_images/images/sql.png)
+
 
