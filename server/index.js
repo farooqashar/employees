@@ -57,10 +57,16 @@ app.put("/update", (req,res) => {
     });
 });
 
-app.delete("/delete:id", (req,res) => {
+app.delete("/delete/:id", (req,res) => {
     const id = req.params.id;
-
-    
+    db.query("DELETE FROM employees WHERE id = ?", id, 
+    (err,result) => {
+        if (err) {
+            console.error(err);
+        } else {
+            res.send(result);
+        }
+    })
 })
 
 app.listen(2727, (req, res) => {
