@@ -179,7 +179,7 @@ function App() {
 
         {employees.map(value => {
           return (
-            <>
+            <div key={value.id}>
               <br />
               <Card variant="outlined">
                 <CardHeader
@@ -187,7 +187,7 @@ function App() {
                   subheader={value.role}
                 ></CardHeader>
                 <CardContent>
-                  <div key={value.id}>
+                  <div>
                     <Typography
                       variant="body2"
                       color="textSecondary"
@@ -244,7 +244,7 @@ function App() {
                   </button>
                 </CardActions>
               </Card>
-            </>
+            </div>
           );
         })}
       </div>
