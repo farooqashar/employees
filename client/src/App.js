@@ -24,7 +24,13 @@ function App() {
     }
     )
     .then(data => {
-      console.log("Adding Employee Request 200");
+      setEmployees([...employees,{
+      name: name,
+      age: age,
+      country: country,
+      role: role, 
+      wage: wage
+    }])
     });
 
 
@@ -67,6 +73,9 @@ function App() {
           return (
             <div key={value.id}>
               {value.name}
+              {value.country}
+              {value.role}
+              {value.age}
             </div>
           )
         }
