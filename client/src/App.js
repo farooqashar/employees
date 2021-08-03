@@ -5,6 +5,7 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
+import Typography from '@material-ui/core/Typography';
 
 function App() {
 
@@ -108,10 +109,14 @@ function App() {
         (value) => {
           return (
             <Card>
+
+            <CardHeader 
+            title={value.name}>
+
+            </CardHeader>
             <CardContent>
 
             <div key={value.id}>
-              {value.name}
               {value.country}
               {value.role}
               {value.age}
