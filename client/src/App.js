@@ -60,7 +60,6 @@ function App() {
         <button onClick = {handleSubmit} type="submit">Add Employee</button>
       </div>
       ------
-      {console.log(employees)}
       <button onClick={getEmployees}> Show Employees </button>
     </div>
     </>
