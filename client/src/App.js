@@ -67,26 +67,34 @@ function App() {
     <>
     <div className="App">
 
-      <div className="formInfo">
-        <label htmlFor="name">Name:</label>
-        <input id="name" type="text" onChange={(event) => setName(event.target.value)}/>
+      <h1>Human Resources Management System</h1>
 
-        <label htmlFor="age">Age:</label>
-        <input id="age" type="number" onChange={(event) => setAge(event.target.value)} />
+      <h4 class="subttt">Adding Employees</h4>
 
-        <label htmlFor="country">Country:</label>
-        <input id="country" type="text" onChange={(event) => setCountry(event.target.value)} />
-
-        <label htmlFor="role">Role:</label>
-        <input id="role" type="text" onChange={(event) => setRole(event.target.value)}/>
-
-        <label htmlFor="wage">Wage(Year):</label>
-        <input id="wage" type="number" onChange={(event) => setWage(event.target.value)}/>
-
-        <button onClick = {handleSubmit} type="submit">Add Employee</button>
+      <div class="form-group">
+        <label class="form-label" htmlFor="name">Name:</label>
+        <input placeholder="Enter A Name Here" rows = "1" cols = "47" required class="form-control" id="name" type="text" onChange={(event) => setName(event.target.value)}/>
+        <p></p>
+        <label class="form-label" htmlFor="age">Age:</label>
+        <input placeholder="Enter An Age Here" rows = "1" cols = "47" required class="form-control" id="age" type="number" onChange={(event) => setAge(event.target.value)} />
+<p></p>
+        <label class="form-label" htmlFor="country">Country:</label>
+        <input placeholder="Enter A Country Here" rows = "1" cols = "47" required class="form-control" id="country" type="text" onChange={(event) => setCountry(event.target.value)} />
+<p></p>
+        <label class="form-label" htmlFor="role">Role:</label>
+        <input placeholder="Enter Employee Position Here" rows = "1" cols = "47" required class="form-control" id="role" type="text" onChange={(event) => setRole(event.target.value)}/>
+<p></p>
+        <label class="form-label" htmlFor="wage">Yearly Wage:</label>
+        <input placeholder="Enter Yearly Wage in USD Here" rows = "1" cols = "47" required class="form-control" id="wage" type="number" onChange={(event) => setWage(event.target.value)}/>
+        <br />
+        <button class="btn btn-primary" onClick = {handleSubmit} type="submit">Add Employee</button>
       </div>
-      ------
-      <button onClick={getEmployees}> Show Employees </button>
+        
+        <br />
+        <br />
+      <h4 class="subttt">Current Employees</h4>
+
+      <button class="btn btn-primary" onClick={getEmployees}> Show Employees </button>
 
       {employees.map(
         (value) => {
